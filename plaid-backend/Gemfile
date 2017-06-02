@@ -12,6 +12,8 @@ gem 'rails', '~> 5.0.2'
 gem 'puma', '~> 3.0'
 gem 'plaid'
 gem 'figaro'
+gem 'rack-cors'
+gem 'pry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
