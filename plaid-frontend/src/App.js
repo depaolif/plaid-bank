@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PlaidLink from 'react-plaid-link'
 import './App.css';
 
 class App extends Component {
+  handleOnSuccess(token, metadata) {
+    debugger
+  }
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>Plaid Link:</h1>
+        <PlaidLink
+          publicKey="402b7402aead5333ec37bfef739268"
+          product="transactions"
+          env="sandbox"
+          clientName="frederico"
+          onSuccess={this.handleOnSuccess}
+        />
       </div>
     );
   }
