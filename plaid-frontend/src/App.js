@@ -18,7 +18,8 @@ class App extends Component {
       }
     })
     .then((response) => {
-      response.data
+      var data = response.data
+      debugger
     })
   }
 

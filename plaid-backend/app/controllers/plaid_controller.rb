@@ -6,13 +6,27 @@ class PlaidController < ApplicationController
 		session["access_token"] = response["access_token"]
 		session["item_id"] = response["item_id"]
 		accounts_info = get_auth
-		render json: accounts_info
+		transactions_info = get_transactions
+		render json: {accounts_info: accounts_info, transactions_info: transactions_info}
 	end
 
 	private
 
 	def get_auth
 		$client.auth.get(session["access_token"])
+	end
+
+	def get_transactions
+		transaction_response = $client.transactions.get(session["access_token"], (Date.today - 30).to_s, Date.today.to_s)
+		transactions = transaction_response["transactions"]
+		while transactions.length < transaction_response['total_transactions']
+		  transaction_response = $client.transactions.get(access_token,
+		                                                 '2016-07-12',
+		                                                 '2017-01-09',
+		                                                 offset: transactions.length)
+		  transactions += transaction_response['transactions']
+		end
+		binding.pry
 	end
 
 end
