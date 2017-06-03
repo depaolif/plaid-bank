@@ -5,7 +5,14 @@ class PlaidController < ApplicationController
 		response = $client.item.public_token.exchange(params["public_token"])
 		session["access_token"] = response["access_token"]
 		session["item_id"] = response["item_id"]
-		byebug
+		accounts_info = get_auth
+		render json: accounts_info
+	end
+
+	private
+
+	def get_auth
+		$client.auth.get(session["access_token"])
 	end
 
 end

@@ -17,6 +17,9 @@ class App extends Component {
         public_token: public_token
       }
     })
+    .then((response) => {
+      response.data
+    })
   }
 
   render() {
@@ -29,6 +32,7 @@ class App extends Component {
         env="sandbox"
         clientName="client"
         onSuccess={this.handleOnSuccess}
+        buttonText="Log In"
         />
       </div>
     );
