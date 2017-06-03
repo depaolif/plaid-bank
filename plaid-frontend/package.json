@@ -8,7 +8,9 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
-    "react-plaid-link": "^0.1.7"
+    "react-plaid-link": "^0.1.7",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "node-sass-chokidar": "0.0.2",

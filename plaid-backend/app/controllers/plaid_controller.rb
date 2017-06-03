@@ -17,7 +17,7 @@ class PlaidController < ApplicationController
 	end
 
 	def get_transactions
-		sleep(15) # waiting for the Item to be ready to have transactions pulled
+		sleep(30) # waiting for the Item to be ready to have transactions pulled
 		transaction_response = $client.transactions.get(session["access_token"], (Date.today - 30).to_s, Date.today.to_s)
 		transactions = transaction_response["transactions"]
 		while transactions.length < transaction_response['total_transactions']

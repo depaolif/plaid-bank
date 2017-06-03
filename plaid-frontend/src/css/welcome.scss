@@ -1,0 +1,19 @@
+#welcome {
+  text-align: center;
+  margin-top: 10em;
+  h1 {
+    font-size: 64px;
+    margin: 0.5em;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 2em;
+  }
+  button {
+    color: black;
+    background: linear-gradient(white, #CCD6E0);
+    border: 0px solid transparent;
+    border-radius: 4px;
+    outline: none;
+  }
+}
