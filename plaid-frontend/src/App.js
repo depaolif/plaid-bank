@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import PlaidLink from 'react-plaid-link'
-import './App.css'
+import './App.scss'
 
 class App extends Component {
   componentDidMount() {
@@ -19,14 +19,15 @@ class App extends Component {
     })
     .then((response) => {
       var data = response.data
-      debugger
+      // need to set everything in the redux store
     })
   }
 
   render() {
     return (
-      <div>
-        <h1>Plaid Link:</h1>
+      <div id="welcome">
+        <h1>Welcome To Plaid</h1>
+        <h2>Log in to choose your bank</h2>
         <PlaidLink
         publicKey="402b7402aead5333ec37bfef739268"
         product={["auth", "transactions"]}
