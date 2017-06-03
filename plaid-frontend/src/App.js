@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import PlaidLink from 'react-plaid-link'
-import './App.scss'
+import './App.css'
 
 class App extends Component {
   componentDidMount() {
