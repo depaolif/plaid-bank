@@ -2,14 +2,24 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Navbar from './Navbar'
 import Accounts from './Accounts'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 class Dashboard extends Component {
   render() {
     return (
-      <div id="dashboard">
-        <Navbar />
-        <Accounts />
-      </div>
+      <Grid id="dashboard">
+        <Row>
+          <Navbar />
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Accounts />
+          </Col>
+          <Col>
+
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

@@ -1,18 +1,27 @@
 nav {
 	margin: 2em;
+	display:block;
+	vertical-align: middle;
+	height: 100px;
+	line-height: 100px;
 	ul {
 		list-style-type: none;
 
 		li {
-			font-size: 25px;
 		  float: left;
 		  display: inline;
 		  vertical-align: middle;
 
 		}
 
+		.nav-welcome {
+			font-size: 32px;
+		}
+
 		.nav-logout {
+			font-size: 22px;
 			float: right;
+			margin-right: 1em;
 		}
 	}
 
