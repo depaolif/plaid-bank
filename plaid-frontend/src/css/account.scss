@@ -8,13 +8,14 @@
   margin-bottom: 3em;
   padding: 1em;
   text-align: center;
+  background-color: white;
 
   .account-info {
     margin-bottom: 2.5em;
 
     .header {
       font-size: 18px;
-      color: black;
+      color: $offblack;
     }
 
   }

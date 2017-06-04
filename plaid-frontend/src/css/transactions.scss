@@ -1,12 +1,12 @@
 @import './variables.scss';
 
-$bordercolor: black;
+$bordercolor: $offblack;
 
 .transactions {
   margin: 1em auto 1em auto;
   width: 75vw;
   background-color: $offwhite;
-  border: 2px solid $bordercolor;
+  border: 1px solid $bordercolor;
   border-collapse: separate;
   border-radius: 4px;
 
@@ -20,7 +20,6 @@ $bordercolor: black;
       text-align: center;
       color: $bordercolor;
       border: 1px solid $bordercolor;
-      border-bottom: 2px solid $bordercolor;
     }
     td {
       text-align: left;
