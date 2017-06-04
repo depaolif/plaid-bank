@@ -50,6 +50,7 @@ class Transactions extends Component {
      "transaction_id": "lPNjeW1nR6CDn5okmGQ6hEpMo4lLNoSrzqDje",
      "transaction_type": "place"
     }
+    debugger
     const data = this.state.transactions.map((el, i) => {
       return <tr>
         <td>{el["amount"]}</td>
@@ -58,7 +59,6 @@ class Transactions extends Component {
         <td>{el["category"].join(' ')}</td>
       </tr>
     })
-    debugger
     return (
       <table className="transactions">
         <tr>

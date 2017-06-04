@@ -17,3 +17,66 @@
     outline: none;
   }
 }
+
+@keyframes cwSpin
+{
+	0%{transform:rotate(0deg);	}
+	100%{transform:rotate(360deg); }
+}
+
+#loading {
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 40px;
+
+  #spin-panel {
+    width: 25vw;
+    margin: auto;
+
+    #loading8-1, #loading8-2, #loading8-3 {
+      display:block;
+      position:absolute;
+      margin:30px 0 0 100px;
+      width:80px;
+      height:80px;
+
+      #CircleBottom, #CircleMiddle, #CircleTop {
+        display:block;
+        position:absolute;
+
+        width:100px;
+        height:100px;
+
+        border-radius:100px;
+
+        .ball {
+          width:20px;
+          height:20px;
+          display:block;
+          position:absolute;
+          background-color:#06C;
+          border-radius:20px;
+          margin:0 0 0 45px;
+        }
+      }
+
+      #CircleBottom
+      {
+        transform:rotate(0deg);
+      }
+      #CircleMiddle
+      {
+        transform:rotate(50deg);
+      }
+      #CircleTop
+      {
+        transform:rotate(100deg);
+      }
+    }
+    #loading8-1,#loading8-2,#loading8-3
+    {
+      animation: cwSpin 1s linear 0s infinite;
+    }
+  }
+
+}
