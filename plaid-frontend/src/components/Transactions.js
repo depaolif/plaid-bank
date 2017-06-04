@@ -6,7 +6,8 @@ class Transactions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      transactions: []
+      transactions: [],
+      sort: "none",
     }
   }
 
@@ -502,6 +503,11 @@ class Transactions extends Component {
     // });
   }
 
+  sort(event) {
+    const sortType = event.target.name
+    debugger
+  }
+
   render() {
     const { accountId } = this.props
     const data = this.state.transactions.map((el, i) => {
@@ -516,10 +522,10 @@ class Transactions extends Component {
       <table className="transactions">
         <thead>
           <tr>
-            <th className="col-md-2">Amount</th>
-            <th className="col-md-2">Date</th>
-            <th className="col-md-4">Name</th>
-            <th className="col-md-4">Category</th>
+            <th name="amount" className="col-md-2">Amount <div class="arrow-down"></div> </th>
+            <th name="date" className="col-md-2">Date</th>
+            <th name="name" className="col-md-4">Name</th>
+            <th name="category" className="col-md-4">Category</th>
           </tr>
         </thead>
         <tbody>

@@ -20,6 +20,15 @@ $bordercolor: $offblack;
       text-align: center;
       color: $bordercolor;
       border: 1px solid $bordercolor;
+
+      .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #f00;
+      }
+
     }
     td {
       text-align: left;
