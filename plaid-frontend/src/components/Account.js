@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import Transactions from './Transactions'
 import '../css/account.css'
 
@@ -51,8 +50,4 @@ class Account extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  transactions: state.transactions
-})
-
-export default connect(mapStateToProps)(Account)
+export default Account

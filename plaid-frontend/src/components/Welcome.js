@@ -35,9 +35,20 @@ class Welcome extends Component {
   }
 
   render() {
-    const loading = this.state.loading ?
+    const display = this.state.loading ?
       <div id="loading">
-        Loading...
+        Loading account info
+        <div id="spin-panel">
+          <span id="loading8-1">
+                <span id="CircleBottom"><span className="ball"></span></span>
+          </span>
+            <span id="loading8-2">
+                <span id="CircleMiddle"><span className="ball"></span></span>
+          </span>
+            <span id="loading8-3">
+                <span id="CircleTop"><span className="ball"></span></span>
+          </span>
+        </div>
       </div> :
       <div id="welcome">
         <h1>Welcome To Plaid</h1>
@@ -54,20 +65,7 @@ class Welcome extends Component {
 
     return (
       <div>
-        <div id="loading">
-          Loading account info
-          <div id="spin-panel">
-          	<span id="loading8-1">
-                  <span id="CircleBottom"><span className="ball"></span></span>
-         		</span>
-              <span id="loading8-2">
-                  <span id="CircleMiddle"><span className="ball"></span></span>
-         		</span>
-              <span id="loading8-3">
-                  <span id="CircleTop"><span className="ball"></span></span>
-         		</span>
-          </div>
-        </div>
+        {display}
       </div>
     );
   }
