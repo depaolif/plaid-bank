@@ -532,17 +532,17 @@ class Transactions extends Component {
         })
         break
       case "category":
-      transactions = this.state.transactions.sort((a,b) => {
-        var catA = a["category"] ? a["category"].join('').toUpperCase() : "|"
-        var catB = b["category"] ? b["category"].join('').toUpperCase() : "|"
-        if (catA < catB) {
-          return -1;
-        } else if (catA > catB) {
-          return 1;
-        } else {
-          return 0
-        }
-      })
+        transactions = this.state.transactions.sort((a,b) => {
+          var catA = a["category"] ? a["category"].join('').toUpperCase() : "|"
+          var catB = b["category"] ? b["category"].join('').toUpperCase() : "|"
+          if (catA < catB) {
+            return -1;
+          } else if (catA > catB) {
+            return 1;
+          } else {
+            return 0
+          }
+        })
     }
     this.setState({
       sort: sort,
