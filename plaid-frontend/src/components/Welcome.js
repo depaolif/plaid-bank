@@ -12,7 +12,7 @@ class Welcome extends Component {
   }
 
   handleOnSuccess(public_token, metadata) {
-    // send token to client server
+    console.log("going...")
     axios({
       method: 'post',
       url: 'http://localhost:3001/get_access_token',
@@ -22,10 +22,9 @@ class Welcome extends Component {
     })
     .then((response) => {
       var data = response.data
-      // need to set everything in the redux store
       this.props.loadAccounts(data["accounts_info"])
       this.props.loadTransactions(data["transactions_info"])
-      debugger
+      console.log("done")
     })
   }
 

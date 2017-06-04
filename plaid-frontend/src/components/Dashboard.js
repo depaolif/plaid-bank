@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Navbar from './Navbar'
 
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <h1>hello hello welcome</h1>
+      <div id="dashboard">
+        <Navbar />
       </div>
     );
   }

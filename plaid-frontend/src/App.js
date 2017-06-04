@@ -9,10 +9,11 @@ import './App.css'
 class App extends Component {
   render() {
     // include logic here for determining whether the person is logged in or not, and then going either to the welcome component or somewhere else
-    var screen = true ? <Welcome /> : <Dashboard />
+    // var display = this.props.transactions.length > 0 ? <Dashboard /> : <Welcome />
+
     return (
       <div>
-        {screen}
+        <Dashboard />
       </div>
     );
   }

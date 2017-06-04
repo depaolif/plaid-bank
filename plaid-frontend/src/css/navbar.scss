@@ -1,0 +1,19 @@
+nav {
+	margin: 2em;
+	ul {
+		list-style-type: none;
+
+		li {
+			font-size: 25px;
+		  float: left;
+		  display: inline;
+		  vertical-align: middle;
+
+		}
+
+		.nav-logout {
+			float: right;
+		}
+	}
+
+}

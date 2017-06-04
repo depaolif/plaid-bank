@@ -1,8 +1,7 @@
 export default function plaidReducer(state = {
-  accounts: [],
-  transactions: [],
+  accounts: {},
+  transactions: {},
 }, action) {
-  console.log(action);
   switch(action.type) {
  
     case 'LOAD_ACCOUNTS':
