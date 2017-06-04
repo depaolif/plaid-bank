@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Navbar from './Navbar'
-import Accounts from './Accounts'
+import AccountsList from './AccountsList'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 class Dashboard extends Component {
@@ -13,7 +13,7 @@ class Dashboard extends Component {
         </Row>
         <Row>
           <Col md={6}>
-            <Accounts />
+            <AccountsList />
           </Col>
           <Col>
 
