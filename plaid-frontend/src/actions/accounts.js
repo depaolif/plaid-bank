@@ -5,3 +5,7 @@ export const loadAccounts = (accounts) => ({
 export const loadTransactions = (transactions) => ({
 	type: 'LOAD_TRANSACTIONS', payload: transactions
 })
+
+export const logOut = () => ({
+	type: 'LOG_OUT'
+})

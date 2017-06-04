@@ -26,8 +26,6 @@
   }
   .see-transactions {
     text-decoration: underline;
-  }
-  .see-transactions:hover {
-    cursor: pointer;
+    &:hover {cursor: pointer;}
   }
 }

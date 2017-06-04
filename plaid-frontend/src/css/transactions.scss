@@ -23,6 +23,7 @@ $bordercolor: $offblack;
 
       .glyph {
         float: right;
+        &:hover {cursor: pointer;}
       }
     }
     td {
