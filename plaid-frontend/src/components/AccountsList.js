@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Account from './Account'
 
 class AccountsList extends Component {
 	render() {
@@ -73,12 +74,12 @@ class AccountsList extends Component {
 		   "transaction_type": "place"
 		 }]
 		}
-		const accounts_info = dummy["accounts"].map((el,i) => {
-			return <Account />
+		const accounts_info = this.props.accounts["accounts"].map((el,i) => {
+			return <Account accountInfo={el} key={i} />
 		})
 		return (
 			<div id="accounts">
-
+				{accounts_info}
 			</div>
 		)
 	}
