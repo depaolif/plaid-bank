@@ -13,40 +13,55 @@ class Account extends Component {
   }
 
   handleClick() {
-    this.setState({
-      showTransactions: true,
-    });
+    if (!this.state.showTransactions) {
+      this.setState({
+        showTransactions: true,
+      });
+    } else {
+      this.setState({
+        showTransactions: false,
+      });
+    }
   }
 
   render() {
     const { account_id, balances, name, subtype } = this.props.accountInfo
     const seeTransactions = subtype !== "cd" ?
        <p className="see-transactions" onClick={this.handleClick}>
-        See Transactions
+        {this.state.showTransactions ? "Hide Transactions" : "See Transactions"}
       </p> :
       null
     const transactions = this.state.showTransactions ?
        <Transactions accountId={account_id} /> :
       null
+    var subtypeDisplay = subtype === "cd" ? "CD" : subtype[0].toUpperCase() + subtype.slice(1)
     return (
       <Grid className="account">
-        <Row>
-          <Col md={6}>
-            <p className="name">
-              Account Name: {name}
+        <Row className="account-info">
+          <Col md={4}>
+            <p className="header">
+              ACCOUNT NAME
             </p>
             <p>
-              Account Type: {subtype}
+              {name}
             </p>
           </Col>
-          <Col md={6}>
+          <Col md={4}>
+            <p className="header">
+              ACCOUNT TYPE
+            </p>
             <p>
-              Balance
+              {subtypeDisplay}
+            </p>
+          </Col>
+          <Col md={4}>
+            <p className="header">
+              BALANCE
             </p>
             <ul>
-              <li>Available: {balances["available"]}</li>
-              <li>Current: {balances["current"]}</li>
-              <li>Limit: {balances["limit"] === null ? "N/A" : balances["limit"]}</li>
+              {subtype === "checking" || subtype === "savings" ? <li>Available: ${balances["available"]}</li> : null}
+              <li>Current: ${balances["current"]}</li>
+              {subtype === "credit" ? <li>Limit: ${balances["limit"]}</li> : null}
             </ul>
           </Col>
         </Row>

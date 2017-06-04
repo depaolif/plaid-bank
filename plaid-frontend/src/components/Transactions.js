@@ -505,7 +505,7 @@ class Transactions extends Component {
   render() {
     const { accountId } = this.props
     const data = this.state.transactions.map((el, i) => {
-      return <tr>
+      return <tr key={i}>
         <td>{`$${el["amount"].toFixed(2)}`}</td>
         <td>{el["date"]}</td>
         <td>{el["name"]}</td>
@@ -514,13 +514,17 @@ class Transactions extends Component {
     })
     return (
       <table className="transactions">
-        <tr>
-          <th>Amount</th>
-          <th>Date</th>
-          <th>Name</th>
-          <th>Category</th>
-        </tr>
-        {data}
+        <thead>
+          <tr>
+            <th className="col-md-2">Amount</th>
+            <th className="col-md-2">Date</th>
+            <th className="col-md-4">Name</th>
+            <th className="col-md-4">Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data}
+        </tbody>
       </table>
     )
   }
