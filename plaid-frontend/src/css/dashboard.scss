@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+#dashboard {
+  width: 100vw;
+}
+
+#accounts {
+  padding: 1em 0 0em 4em;
+  background-color: white;
+  width: 100vw;
+  color: $darkblue;
+
+  h1 {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}

@@ -506,10 +506,10 @@ class Transactions extends Component {
     const { accountId } = this.props
     const data = this.state.transactions.map((el, i) => {
       return <tr>
-        <td>{el["amount"]}</td>
+        <td>{`$${el["amount"].toFixed(2)}`}</td>
         <td>{el["date"]}</td>
         <td>{el["name"]}</td>
-        <td>{el["category"] ? el["category"].join(' ') : "N/A"}</td>
+        <td>{el["category"] ? el["category"].join(', ') : "N/A"}</td>
       </tr>
     })
     return (

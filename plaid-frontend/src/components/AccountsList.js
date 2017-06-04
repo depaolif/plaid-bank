@@ -581,7 +581,7 @@ class AccountsList extends Component {
 		// 	return <Account accountInfo={el} key={i} />
 		// })
 		return (
-			<div id="accounts">
+			<div>
 				{accounts_info}
 			</div>
 		)

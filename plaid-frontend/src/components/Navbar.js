@@ -7,7 +7,7 @@ class Navbar extends Component {
     return (
       <nav>
 		  <ul>
-		    <li><p className="nav-welcome">Welcome User</p></li>
+		    <li><p className="nav-welcome">Welcome, User</p></li>
 		    <li className="nav-logout"><p>Log Out</p></li>
 		  </ul>
 		</nav>

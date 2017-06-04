@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Navbar from './Navbar'
 import AccountsList from './AccountsList'
 import { Grid, Row, Col } from 'react-bootstrap'
+import "../css/dashboard.css"
 
 class Dashboard extends Component {
   render() {
@@ -11,13 +12,9 @@ class Dashboard extends Component {
         <Row>
           <Navbar />
         </Row>
-        <Row>
-          <Col md={6}>
-            <AccountsList />
-          </Col>
-          <Col>
-
-          </Col>
+        <Row id="accounts">
+          <h1>My Accounts</h1>
+          <AccountsList />
         </Row>
       </Grid>
     );
