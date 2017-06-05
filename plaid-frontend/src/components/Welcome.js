@@ -15,7 +15,6 @@ class Welcome extends Component {
   }
 
   handleOnSuccess(public_token, metadata) {
-    console.log("going...")
     this.setState({
       loading: true
     });
@@ -30,7 +29,6 @@ class Welcome extends Component {
       var data = response.data
       this.props.loadAccounts(data["accounts_info"])
       this.props.loadTransactions(data["transactions_info"])
-      console.log("done")
     })
   }
 
@@ -51,7 +49,7 @@ class Welcome extends Component {
         </div>
       </div> :
       <div id="welcome">
-        <h1>Welcome To Plaid</h1>
+        <h1>Welcome To Kard Banking</h1>
         <h2>Log in to choose your bank</h2>
         <PlaidLink
         publicKey="402b7402aead5333ec37bfef739268"

@@ -8,7 +8,7 @@ export default function plaidReducer(state = {
     case 'LOAD_TRANSACTIONS':
       return Object.assign({}, state, { transactions: action.payload })
     case "LOG_OUT":
-      return {}
+      return {accounts: {}, transactions: {}}
     default:
       return state;
   }

@@ -20,6 +20,8 @@ $bordercolor: $offblack;
       text-align: center;
       color: $bordercolor;
       border: 1px solid $bordercolor;
+      height: 100%;
+      line-height: 100%;
 
       .glyph {
         float: right;
