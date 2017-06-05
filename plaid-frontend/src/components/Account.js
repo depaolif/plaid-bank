@@ -59,9 +59,9 @@ class Account extends Component {
               BALANCE
             </p>
             <ul>
-              {subtype === "checking" || subtype === "savings" ? <li>Available: ${balances["available"]}</li> : null}
-              <li>Current: ${balances["current"]}</li>
-              {subtype === "credit" ? <li>Limit: ${balances["limit"]}</li> : null}
+              {balances["available"] ? <li>Available: ${balances["available"]}</li> : null}
+              {balances["current"] ? <li>Current: ${balances["current"]}</li> : null}
+              {balances["limit"] ? <li>Limit: ${balances["limit"]}</li> : null}
             </ul>
           </Col>
         </Row>
