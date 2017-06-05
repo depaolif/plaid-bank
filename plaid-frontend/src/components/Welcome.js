@@ -64,20 +64,7 @@ class Welcome extends Component {
       </div>
 
     return (
-      <div id="loading">
-        Loading account info
-        <div id="spin-panel">
-          <span id="loading8-1">
-                <span id="CircleBottom"><span className="ball"></span></span>
-          </span>
-            <span id="loading8-2">
-                <span id="CircleMiddle"><span className="ball"></span></span>
-          </span>
-            <span id="loading8-3">
-                <span id="CircleTop"><span className="ball"></span></span>
-          </span>
-        </div>
-      </div>
+      <div>{display}</div>
     );
   }
 }
