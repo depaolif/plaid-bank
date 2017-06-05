@@ -28,10 +28,11 @@
   text-align: center;
   margin-top: 40vh;
   font-size: 40px;
+  width: 100vw;
 
   #spin-panel {
-    width: 25vw;
-    margin: auto;
+    width: 50%;
+    margin: 0 auto;
 
     #loading8-1, #loading8-2, #loading8-3 {
       display:block;
@@ -39,6 +40,7 @@
       margin:30px 0 0 100px;
       width:80px;
       height:80px;
+      animation: cwSpin 1s linear 0s infinite;
 
       #CircleBottom, #CircleMiddle, #CircleTop {
         display:block;
@@ -72,10 +74,6 @@
       {
         transform:rotate(100deg);
       }
-    }
-    #loading8-1,#loading8-2,#loading8-3
-    {
-      animation: cwSpin 1s linear 0s infinite;
     }
   }
 
