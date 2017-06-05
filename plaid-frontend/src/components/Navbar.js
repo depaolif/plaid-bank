@@ -4,10 +4,6 @@ import { logOut } from '../actions/accounts.js'
 import '../css/navbar.css'
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleLogout() {
     this.props.logOut()
   }

@@ -8,4 +8,4 @@ To get this App started,
   password: pass_good
 4. Plaid takes a while to retrieve the transaction history information (around 30s)
 5. You can click on "See Transactions" to see the transaction history for each account-info
-6. You can sort transaction histories by descending by clicking on the sort icon in the table header
+6. You can sort transaction histories by descending or ascending by clicking on the sort icon in the table header
