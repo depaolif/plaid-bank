@@ -6,6 +6,6 @@ To get this App started,
 3. Log in with the sandbox credentials, as listed in the Plaid-Link tooltip at the bottom of the screen
   username: user_good
   password: pass_good
-4. Plaid takes a while to retrieve the transaction history information (around 30s)
+4. Plaid takes a while to retrieve the transaction history information (around 30s). If the loading is taking too long, try refreshing the page and logging in again.
 5. You can click on "See Transactions" to see the transaction history for each account-info
 6. You can sort transaction histories by descending or ascending by clicking on the sort icon in the table header

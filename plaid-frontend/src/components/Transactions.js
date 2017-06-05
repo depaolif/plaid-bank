@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../css/transactions.css'
-import { Row, Glyphicon } from 'react-bootstrap'
+import { Glyphicon } from 'react-bootstrap'
 
 class Transactions extends Component {
   constructor(props) {
@@ -88,20 +88,16 @@ class Transactions extends Component {
         <thead>
           <tr>
             <th className="col-md-2">Amount
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-up" /></Row>
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-bottom" /></Row>
+              <Glyphicon onClick={this.handleSort} id="amount" className="glyph" glyph="triangle-bottom" />
             </th>
             <th className="col-md-2">Date
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-up" /></Row>
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-bottom" /></Row>
+              <Glyphicon onClick={this.handleSort} id="date" className="glyph" glyph="triangle-bottom" />
             </th>
             <th className="col-md-4">Name
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-up" /></Row>
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-bottom" /></Row>
+              <Glyphicon onClick={this.handleSort} id="name" className="glyph" glyph="triangle-bottom" />
             </th>
             <th className="col-md-4">Category
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-up" /></Row>
-              <Row><Glyphicon onClick={this.handleSort} className="glyph" glyph="triangle-bottom" /></Row>
+              <Glyphicon onClick={this.handleSort} id="category" className="glyph" glyph="triangle-bottom" />
             </th>
           </tr>
         </thead>
