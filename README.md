@@ -1,7 +1,7 @@
 # Mini-Banking App using Plaid
 
 To get this App started,
-1. Go to plaid-backend and start a rails server at port 3001 (`rails server -port 3001`)
+1. Go to plaid-backend and start a rails server at port 3001 (`rails server -p 3001`)
 2. Go to plaid-frontend and start a server at port 3000 (`npm start`)
 3. Log in with the sandbox credentials, as listed in the Plaid-Link tooltip at the bottom of the screen
   username: user_good

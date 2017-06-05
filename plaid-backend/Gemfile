@@ -14,6 +14,7 @@ gem 'plaid'
 gem 'figaro'
 gem 'rack-cors'
 gem 'pry'
+gem 'ultrahook' # for receiving webhooks on localhost
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
